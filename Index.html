@@ -1,0 +1,267 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Canva Rimba</title>
+  <link rel="preconnect" href="https://files.catbox.moe">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }body {
+  background: linear-gradient(135deg, #0f172a, #111827, #1e293b);
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-screen,
+.main-content {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 24px;
+  padding: 35px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 14px;
+  outline: none;
+  margin: 15px 0;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.12);
+  color: white;
+}
+
+input::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+button,
+.btn-link {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #facc15, #f59e0b);
+  color: #111;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+button:hover,
+.btn-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+}
+
+.main-content {
+  display: none;
+  flex-direction: column;
+  padding: 50px 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  animation: fadeIn 1.2s ease;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 24px;
+  margin: 30px auto;
+  display: block;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+.description {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 30px;
+  border-radius: 22px;
+  line-height: 1.8;
+  text-align: left;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+footer {
+  margin-top: 50px;
+  opacity: 0.75;
+  font-size: 0.95rem;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.error {
+  margin-top: 10px;
+  color: #fca5a5;
+  font-size: 0.95rem;
+}
+
+
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .hero-img {
+    max-width: 650px;
+  }
+
+  .description {
+    font-size: 1.08rem;
+    padding: 40px;
+  }
+
+  .card {
+    max-width: 560px;
+    padding: 45px;
+  }
+
+  button,
+  .btn-link {
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .card,
+  .description {
+    padding: 24px;
+  }
+}
+
+  </style>
+</head>
+<body>  <section class="login-screen fade-in" id="loginScreen">
+    <div class="card">
+      <h1>User Pass</h1>
+      <h2>Masukkan Password</h2>
+      <input type="password" id="password" placeholder="Masukkan password..." />
+      <button onclick="checkPassword()">Submit</button>
+      <p class="error" id="errorText"></p>
+    </div>
+  </section>  <section class="main-content" id="mainContent">
+    <div class="container">
+      <h1>Canva Rimba</h1><img
+    src="https://images.unsplash.com/photo-1589820296156-2454bb8a6ad1?auto=format&fit=crop&w=1200&q=80"
+    alt="Pineapple"
+    class="hero-img"
+    loading="lazy"
+    fetchpriority="high"
+  />
+
+  <div class="description">
+    <p>
+      Pineapples are tropical fruits that thrive in warm and sunny climates such as Indonesia.
+      They are widely loved for their unique sweet taste mixed with a slight sour freshness,
+      making them one of the most refreshing fruits to enjoy during hot weather. Pineapples have
+      rough, spiky skin on the outside, yellow juicy flesh on the inside, and a crown of green
+      leaves on top that makes them instantly recognizable.
+    </p>
+    <br>
+    <p>
+      Besides their delicious taste, pineapples are also rich in nutrients. They contain vitamin C,
+      antioxidants, and bromelain, an enzyme known to help digestion and reduce inflammation.
+      Many people enjoy pineapples fresh, while others use them in juices, desserts, fruit salads,
+      or even savory dishes. Their refreshing flavor makes them a favorite ingredient in tropical cuisine.
+    </p>
+    <br>
+    <p>
+      In many tropical regions, pineapples are more than just fruit—they are part of daily life.
+      Farmers cultivate them in large plantations, and they become an important source of income.
+      Pineapples symbolize freshness, hospitality, and tropical beauty. Their strong appearance and
+      vibrant taste reflect the richness of nature itself.
+    </p>
+  </div>
+
+  <a
+    href="https://canva.link/wo5js04qedpkuiu"
+    target="_blank"
+    class="btn-link"
+  >
+    Menuju Canva
+  </a>
+
+  <footer>
+    © 2026 Canva Rimba — All Rights Reserved
+  </footer>
+</div>
+
+  </section>  <script>
+    function checkPassword() {
+      const password = document.getElementById('password').value;
+      const errorText = document.getElementById('errorText');
+
+      if (password === 'RimbaMS') {
+        document.getElementById('loginScreen').style.display = 'none';
+        document.getElementById('mainContent').style.display = 'flex';
+      } else {
+        errorText.textContent = 'Password salah. Coba lagi.';
+      }
+    }
+  </script></body>
+</html>
